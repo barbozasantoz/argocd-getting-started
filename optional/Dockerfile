@@ -4,7 +4,7 @@ RUN git clone https://github.com/barbozasantoz/spring-petclinic-microservices.gi
 
 FROM maven:3.5-jdk-8-alpine
 WORKDIR /app
-COPY --from=0 /app/spring-petclinic /app 
+COPY --from=0 /app/spring-petclinic-microservices /app 
 RUN mvn clean package
 
 FROM openjdk:8-jre-alpine
